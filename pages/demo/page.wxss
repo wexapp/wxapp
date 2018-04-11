@@ -1,0 +1,12 @@
+view {
+    font-size: 20px;
+    color: #0089ff;
+}
+.bottom-btn { 
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0089ff;
+    color: #fff;
+}
