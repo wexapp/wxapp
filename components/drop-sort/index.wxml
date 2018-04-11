@@ -1,0 +1,14 @@
+<view class="sort-wrapper">
+    <view bindtap="sorttap" class="title">{{ sorts[activeIndex].text }}</view>
+    <view class="list {{ isActive ? 'active' : '' }}">
+        <view 
+            wx:for="{{ sorts }}" 
+            wx:key="id" 
+            class="item {{ index === activeIndex ? 'active' : '' }}"
+            data-unique="{{ index }}"
+            bindtap="itemtap"
+        >
+            {{ item.text }}
+        </view>
+    </view>
+</view>

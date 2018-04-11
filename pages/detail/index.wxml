@@ -1,0 +1,43 @@
+<view class="wrapper" style="overflow: {{ overflow ? 'hidden' : '' }}">
+    <view>Hello world</view>
+    <view wx:for="{{ userlist }}" wx:for-item="user" wx:key="{{ index }}">
+        <view>{{ user.text }}</view>
+    </view>
+
+    <adsorption bind:subscribe="onloadtap">
+        <drop-sort isActive="{{ isActive }}" activeIndex="{{ activeIndex }}" bind:choose="sort" sorts="{{ userlist }}"></drop-sort>
+    </adsorption>
+
+
+    <view wx:for="{{ userlist }}" wx:for-item="user" wx:key="{{ index }}">
+        <view>{{ user.text }}</view>
+    </view>
+    <view wx:for="{{ userlist }}" wx:for-item="user" wx:key="{{ index }}">
+        <view>{{ user.text }}</view>
+    </view>
+    <view wx:for="{{ userlist }}" wx:for-item="user" wx:key="{{ index }}">
+        <view>{{ user.text }}</view>
+    </view>
+    <view wx:for="{{ userlist }}" wx:for-item="user" wx:key="{{ index }}">
+        <view>{{ user.text }}</view>
+    </view>
+    <view wx:for="{{ userlist }}" wx:for-item="user" wx:key="{{ index }}">
+        <view>{{ user.text }}</view>
+    </view>
+    <view wx:for="{{ userlist }}" wx:for-item="user" wx:key="{{ index }}">
+        <view>{{ user.text }}</view>
+    </view>
+    <view wx:for="{{ userlist }}" wx:for-item="user" wx:key="{{ index }}">
+        <view>{{ user.text }}</view>
+    </view>
+    <view wx:for="{{ userlist }}" wx:for-item="user" wx:key="{{ index }}">
+        <view>{{ user.text }}</view>
+    </view>
+    <view wx:for="{{ userlist }}" wx:for-item="user" wx:key="{{ index }}">
+        <view>{{ user.text }}</view>
+    </view>
+    <view wx:for="{{ userlist }}" wx:for-item="user" wx:key="{{ index }}">
+        <view>{{ user.text }}</view>
+    </view>
+
+</view>

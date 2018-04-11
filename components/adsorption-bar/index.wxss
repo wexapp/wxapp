@@ -1,0 +1,34 @@
+
+.placeholder {
+    position: relative;
+    z-index: 100;
+}
+
+.adsorption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    z-index: 1000;
+}
+.adsorption.fixed {
+    position: fixed;
+}
+
+.ads-mark {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.ads-mark.show {
+    display: block;
+}
+
+.ads-mark.hide {
+    display: none;
+}

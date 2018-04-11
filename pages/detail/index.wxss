@@ -1,0 +1,11 @@
+.wrapper {
+    height: 200vh;
+    /* overflow: hidden; */
+}
+
+.list {
+    height: 100rpx;
+    background: #fff;
+    display: block;
+    width: 100rpx;
+}

@@ -1,0 +1,21 @@
+<!-- 外层占位元素用来占位，保证打开遮照时页面不抖动 -->
+<view 
+    id="placeholder" 
+    class="placeholder" 
+    style="height: {{ placeholderEleHeight }}px"
+>
+<!-- 吸附元素用来展示给用户，包裹传入的slot -->
+    <view 
+        id="adsorption" 
+        class="adsorption {{ placeholderEleTop < 0 ? 'fixed' : '' }}" 
+        bindtap="switchtap"
+    >
+        <slot />
+    </view>
+</view>
+
+<!-- 遮照层的位置关联到占位元素的位置信息 -->
+<view 
+    class="ads-mark {{ active ? 'show' : 'hide' }}" 
+    style="top: {{ placeholderEleTop + placeholderEleHeight }}px"
+/>
