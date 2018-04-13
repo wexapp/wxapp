@@ -1,12 +1,19 @@
-view {
-    font-size: 20px;
-    color: #0089ff;
+page {
+    background: #ccc;
 }
-.bottom-btn { 
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #0089ff;
-    color: #fff;
+swiper-item {
+    position: relative;
+    display: block;
+    background: transparent;
+    width: 90%!important;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+swiper {
+    width: 500rpx;
+}
+
+swiper-item image {
+    width: 100%;
 }

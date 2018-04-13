@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.9.94",
 	"appid": "wxa5531f523a3bc21c",
-	"projectname": "sapp",
+	"projectname": "demo",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
@@ -30,12 +30,18 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 1,
 			"list": [
 				{
 					"id": -1,
 					"name": "demo",
 					"pathName": "pages/demo/page",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "轮播",
+					"pathName": "pages/swiper/page",
 					"query": ""
 				}
 			]

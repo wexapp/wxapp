@@ -1,4 +1,8 @@
-<button type="warn">Hello World</button>
-<view>Hello World</view>
-<button class="bottom-btn">开始</button>
-<p>早安</p>
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item  style="width: 90%!important">
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
