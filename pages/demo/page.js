@@ -1,20 +1,4 @@
 Page({
-<<<<<<< HEAD
-    onLoad() {
-        wx.getLocation({
-            type: 'wgs84',
-            success: function(res) {
-              var latitude = res.latitude
-              var longitude = res.longitude
-              var speed = res.speed
-              var accuracy = res.accuracy;
-
-              console.log(res);
-            }
-        })
-    }
-});
-=======
     data: {
       imgUrls: [
         'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
@@ -47,4 +31,3 @@ Page({
       })
     }
   })
->>>>>>> 8559833b8bb7978917e5e47b0914037d4270f3c8
