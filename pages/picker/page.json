@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "picker test",
+    "navigationBarTitleStyle": "black",
+    "backgroundColor": "#dadada",
+    "usingComponents": {
+        "custom-picker": "../../components/custom-picker/com"
+    }
+}

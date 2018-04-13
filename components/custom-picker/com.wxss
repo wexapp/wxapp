@@ -1,0 +1,41 @@
+page {
+    overflow: hidden;
+}
+.picker-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .6);
+    transform: translate3d(0, 100%, 0);
+    transition: transform .1s;
+    overflow: hidden;
+}
+.picker-wrapper.active {
+    transform: translate3d(0, 0, 0);
+    transition: transform 1s;
+}
+.picker-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 630rpx;
+    height: 90rpx;
+    background-color: #fff;
+    box-sizing: border-box;
+    border-bottom: 1rpx solid #ccc;
+}
+.flex-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 630rpx;
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+}
+.picker-colum-item {
+    flex: 1 1 0;
+}

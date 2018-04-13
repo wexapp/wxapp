@@ -1,0 +1,33 @@
+<view 
+    class="com-wrapper" 
+    bindtouchmove="touchmove" 
+    bindtouchend="touchend" 
+    bindtouchstart="touchstart" 
+>
+    <view class="mask mask-top"></view>
+    <view class="mask mask-bottom"></view>
+    <view 
+        id="flex-wrapper"
+        class="flex-wrapper"
+        animation="{{ animationData }}"
+    >
+        <view class="flex-item">1</view>
+        <view class="flex-item">2</view>
+        <view class="flex-item">2</view>
+        <view class="flex-item">2</view>
+        <view class="flex-item">2</view>
+        <view class="flex-item">2</view>
+        <view class="flex-item">2</view>
+        <view class="flex-item">2</view>
+        <view class="flex-item">2</view>
+        <view class="flex-item">2</view>
+        <view class="flex-item">2</view>
+        <view class="flex-item">2</view>
+        <view class="flex-item">2</view>
+        <view class="flex-item">2</view>
+        <view class="flex-item">2</view>
+        <view class="flex-item">2</view>
+        <view class="flex-item">2</view>
+        <view class="flex-item">2</view>
+    </view>
+</view>

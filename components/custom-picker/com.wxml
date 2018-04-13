@@ -1,0 +1,13 @@
+<view wx:if="{{ 1 }}" class="picker-wrapper {{ active ? 'active' : '' }}" catchtouchmove="true">
+    <view class="picker-title">
+        eeeee
+    </view>
+    <view class="flex-container">
+        <picker-item class="picker-colum-item"></picker-item>
+        <picker-item class="picker-colum-item"></picker-item>
+    </view>
+</view>
+
+<picker wx:else range="{{ [1, 2, 2, 2, 2, 2, 3, 5] }}">
+    <view>picker</view>
+</picker>

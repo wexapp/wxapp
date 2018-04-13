@@ -1,0 +1,33 @@
+.com-wrapper {
+    position: relative;
+    height: 100%;
+    height: 100%;
+    background: #f60;
+    overflow: hidden;
+}
+.mask {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 270rpx;
+    z-index: 100;
+}
+.mask-top {
+    top: 0;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, .6), rgba(255, 255, 255, .1));
+}
+.mask-bottom {
+    bottom: 0;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, .6),  rgba(255, 255, 255, .1));
+}
+.flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    transform: translate3d(0, 270rpx, 0);
+}
+.flex-item {
+    height: 90rpx;
+    line-height: 90rpx;
+    text-align: center;
+    flex: 1 1 0;
+}

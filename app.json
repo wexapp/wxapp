@@ -4,7 +4,8 @@
 		"pages/detail/index",
 		"pages/demo/page",
 		"pages/swiper/page",
-		"pages/logs/logs"
+		"pages/logs/logs",
+		"pages/picker/page"
 	],
 	"window":{
 		"backgroundTextStyle":"light",
