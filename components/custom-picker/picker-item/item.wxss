@@ -23,11 +23,12 @@
 .flex-wrapper {
     display: flex;
     flex-direction: column;
-    transform: translate3d(0, 270rpx, 0);
 }
 .flex-item {
     height: 90rpx;
     line-height: 90rpx;
     text-align: center;
     flex: 1 1 0;
+    box-sizing: border-box;
+    border: 1rpx solid blue;
 }

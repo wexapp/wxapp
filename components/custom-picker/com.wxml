@@ -3,8 +3,7 @@
         eeeee
     </view>
     <view class="flex-container">
-        <picker-item class="picker-colum-item"></picker-item>
-        <picker-item class="picker-colum-item"></picker-item>
+        <picker-item active="{{ 5 }}" class="picker-colum-item" bind:columnchange="onColumnChange" wx:for="{{ range }}" range="{{ item }}" wx:key="{{ index }}" />
     </view>
 </view>
 
