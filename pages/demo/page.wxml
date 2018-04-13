@@ -1,0 +1,11 @@
+<<<<<<< HEAD
+=======
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item  style="width: 90%!important">
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+>>>>>>> 8559833b8bb7978917e5e47b0914037d4270f3c8

@@ -1,0 +1,14 @@
+.swiper-container {
+    overflow: hidden;
+}
+.swiper-content {
+    display: block;
+    white-space: nowrap;
+}
+.swiper-item {
+    display: inline-block;
+    width: 500rpx;
+    height: 100rpx;
+    background-color: #ccc;
+    margin-right: 10px;
+}
