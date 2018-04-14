@@ -1,0 +1,6 @@
+<view class="section">
+    {{ text }}
+</view>
+<view class="border" style="display: {{ showBorder ? 'block' : 'none' }}">
+    
+</view>

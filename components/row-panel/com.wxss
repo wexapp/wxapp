@@ -1,0 +1,19 @@
+.section {
+    height: 30rpx;
+    line-height: 30rpx;
+}
+.section:before {
+    display: inline-block;
+    content: "";
+    width: 30rpx;
+    height: 30rpx;
+    border-radius: 50%;
+    border: 6rpx solid #0089ff;
+    line-height: 30rpx;
+    box-sizing: border-box;
+}
+.border {
+    border-left: 2rpx #0089ff dashed;
+    height: 100rpx;
+    margin-left: 15rpx;
+}
