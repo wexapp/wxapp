@@ -5,7 +5,8 @@
 		"pages/demo/page",
 		"pages/swiper/page",
 		"pages/logs/logs",
-		"pages/picker/page"
+		"pages/picker/page",
+		"pages/picker/new-picker/page"
 	],
 	"window": {
 		"backgroundTextStyle": "light",

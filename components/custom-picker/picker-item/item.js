@@ -1,7 +1,7 @@
 Component({
     properties: {
         range: Array,
-        active: Number
+        value: Number
     },
     data: {
         animationData: {},
@@ -25,7 +25,7 @@ Component({
         },
         touchend(e) {
             if(this.isStart) return;
-            let index = this.data.active || 0;
+            let index = this.data.value || 0;
             let rangeLength = this.data.range.length;
             // 记录手指滑动时间，用来计算缓冲距离
             this.time = e.timeStamp - this.starTime;
@@ -94,7 +94,7 @@ Component({
         const query = wx.createSelectorQuery().in(this)
         query.select('#flex-wrapper').boundingClientRect((res) => {
             this.height = res.height;
-            this.top = this.initialTopValue - this.data.active * this.itemHeight + this.correctValue * this.data.active;
+            this.top = this.initialTopValue - this.data.value * this.itemHeight + this.correctValue * this.data.value;
 
             this.setData({
                 transYValue: this.top

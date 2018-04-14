@@ -1,3 +1,16 @@
-<custom-picker range="{{ range }}" active="{{ active }}" bind:columnchange="onColumnChange" bind:change="onChange" bind:cancel="onCancel">
+<custom-picker 
+    range="{{ range }}" 
+    active="{{ active }}" 
+    bind:columnchange="onColumnChange" 
+    bind:change="onChange" 
+    bind:cancel="onCancel"
+    value="{{ value }}"
+>
     <view bindtap="btntap">自己写的picker</view>
 </custom-picker>
+
+<view>
+    {{ range[0][value[0]] }}{{ range[1][value[1]] }}{{ range[2][value[2]] }}{{ range[3][value[3]] }}
+</view>
+
+<navigator url="./new-picker/page"><button style="z-index: -1">跳到下一页面</button></navigator>

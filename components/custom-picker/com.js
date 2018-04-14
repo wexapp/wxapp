@@ -1,24 +1,35 @@
 Component({
     properties: {
         range: Array,
-        active: Boolean
+        active: Boolean,
+        value: Array
     },
     data: {
         active: false
     },
     methods: {
         onColumnChange(e) {
-            this.triggerEvent('columnchange', { index: e.detail.index });
+            const index = e.detail.index;
+            const column = e.currentTarget.dataset.column;
+
+            this.triggerEvent('columnchange', { 
+                index,
+                column
+            });
+
+            this.value[column] = index;
         },
-        empty() {},
         ensure(e) {
-            this.triggerEvent('change');
+            this.triggerEvent('change', { value: this.value });
         },
         cancel(e) {
             this.triggerEvent('cancel');
         }
     },
     ready() {
-
+        this.value = [];
+        this.data.range.forEach(item => {
+            this.value.push(item.active || 0);
+        });
     }
 });
