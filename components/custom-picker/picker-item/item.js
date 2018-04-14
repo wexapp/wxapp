@@ -29,7 +29,7 @@ Component({
             let rangeLength = this.data.range.length;
             // 记录手指滑动时间，用来计算缓冲距离
             this.time = e.timeStamp - this.starTime;
-            const bufferFactor = (Math.abs(this.diffY) / this.time) * rangeLength;
+            const bufferFactor = (Math.abs(this.diffY) / this.time) * 10;
 
             this.top = this.top + this.diffY / this.pixelRatio * bufferFactor;
             
@@ -65,7 +65,7 @@ Component({
                 this.top = Math.max(this.top, this.minHeight - this.height);
             }
 
-            this.animation.translate3d(0, this.top, 0).step({ duration: 50 * rangeLength });
+            this.animation.translate3d(0, this.top, 0).step({ duration: Math.min(50 * rangeLength, 1000) });
 
             this.setData({
                 animationData: this.animation.export()

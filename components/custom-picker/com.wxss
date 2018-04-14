@@ -9,12 +9,11 @@ page {
     bottom: 0;
     background-color: rgba(0, 0, 0, .6);
     transform: translate3d(0, 100%, 0);
-    transition: transform .1s;
     overflow: hidden;
 }
 .picker-wrapper.active {
     transform: translate3d(0, 0, 0);
-    transition: transform 1s;
+    transition: transform .3s;
 }
 .picker-title {
     position: absolute;

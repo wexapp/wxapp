@@ -1,7 +1,7 @@
 Component({
     properties: {
         range: Array,
-        active: Number
+        active: Boolean
     },
     data: {
         active: false
@@ -10,11 +10,15 @@ Component({
         onColumnChange(e) {
             this.triggerEvent('columnchange', { index: e.detail.index });
         },
-        empty() {}
+        empty() {},
+        ensure(e) {
+            this.triggerEvent('change');
+        },
+        cancel(e) {
+            this.triggerEvent('cancel');
+        }
     },
     ready() {
-        this.setData({
-            active: true
-        });
+
     }
 });
