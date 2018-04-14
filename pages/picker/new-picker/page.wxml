@@ -1,0 +1,15 @@
+<new-picker 
+    range="{{ range }}" 
+    active="{{ active }}" 
+    bind:change="onChange" 
+    value="{{ value }}" 
+    bind:columnchange="onColumnChange"
+    bind:cancel="onCancel"
+>
+    <view bindtap="btntap" slot="default">自定义多列选择器</view>
+    <icon type="waiting" slot="middle"></icon>
+</new-picker>
+
+<view>
+    {{ range[0][value[0]] }}{{ range[1][value[1]] }}{{ range[2][value[2]] }}{{ range[3][value[3]] }}
+</view>

@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "picker new",
+    "navigationBarTitleStyle": "black",
+    "backgroundColor": "#dadada",
+    "usingComponents": {
+        "new-picker": "../../../components/enhance-picker/com"
+    }
+}

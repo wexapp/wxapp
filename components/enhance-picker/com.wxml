@@ -1,0 +1,19 @@
+<slot name="default"></slot>
+<view class="mask {{ active ? 'active' : '' }}" bindtap="cancel" />
+
+<view class="picker-wrapper {{ active ? 'active' : '' }}">
+    <view class="picker-title">
+        <view class="title-item title-left" bindtap="cancel">取消</view>
+        <view class="title-item title-center">
+            <slot name="middle"></slot>
+        </view>
+        <view class="title-item title-right" bindtap="ensure">确定</view>
+    </view>
+    <picker-view class="picker-view" value="{{ value }}" bindchange="bindChange">
+        <picker-view-column wx:for="{{ range }}" wx:key="{{ index }}">
+            <view wx:for="{{ item }}" class="picker-item" wx:key="{{ index }}">
+                <view class="text">{{ item }}</view>
+            </view>
+        </picker-view-column>
+    </picker-view>
+</view>

@@ -1,0 +1,68 @@
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translate3d(0, 100%, 0);
+    opacity: 0;
+    background-color: rgba(0, 0, 0, .6);
+}
+.mask.active {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    transition: opacity .3s;
+}
+
+
+.picker-wrapper {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    background-color: #fff;
+    transform: translate3d(0, 100%, 0);
+}
+.picker-wrapper.active {
+    transform: translate3d(0, 0, 0);
+    transition: transform .3s;
+}
+
+
+.picker-view {
+    height: 540rpx;
+    box-sizing: border-box;
+}
+
+.picker-title {
+    display: flex;
+    align-items: center;
+    height: 90rpx;
+    background-color: #fff;
+    border-bottom: 1rpx solid #dadada;
+}
+.picker-title .title-item {
+    flex: 1 1 0;
+    padding: 0 30rpx;
+    font-size: 30rpx;
+}
+.picker-title .title-left {
+    color: #ccc;
+}
+.picker-title .title-center {
+    text-align: center;
+}
+.picker-title .title-right {
+    text-align: right;
+    color: #15b869;
+}
+
+
+.picker-item {
+    display: flex;
+    font-size: 28rpx;
+}
+.picker-item .text {
+    margin: auto;
+}
