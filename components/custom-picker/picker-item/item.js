@@ -71,7 +71,6 @@ Component({
                 animationData: this.animation.export()
             });
 
-            console.log('您选择了第' + (index + 1) + '个');
             this.triggerEvent('columnchange', { index: index });
         }
     },

@@ -1,12 +1,9 @@
-<view wx:if="{{ 1 }}" class="picker-wrapper {{ active ? 'active' : '' }}" catchtouchmove="true">
+<view class="picker-wrapper {{ active ? 'active' : '' }}" catchtouchmove="true">
     <view class="picker-title">
-        eeeee
+        <view class="title-item title-left">取消</view>
+        <view class="title-item title-right">确定</view>
     </view>
     <view class="flex-container">
-        <picker-item active="{{ 5 }}" class="picker-colum-item" bind:columnchange="onColumnChange" wx:for="{{ range }}" range="{{ item }}" wx:key="{{ index }}" />
+        <picker-item active="{{ index + 1 }}" class="picker-colum-item" bind:columnchange="onColumnChange" wx:for="{{ range }}" range="{{ item }}" wx:key="{{ index }}" />
     </view>
 </view>
-
-<picker wx:else range="{{ [1, 2, 2, 2, 2, 2, 3, 5] }}">
-    <view>picker</view>
-</picker>

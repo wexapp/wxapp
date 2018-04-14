@@ -20,11 +20,19 @@ page {
     position: absolute;
     left: 0;
     right: 0;
+    display: flex;
+    align-items: center;
     bottom: 630rpx;
     height: 90rpx;
     background-color: #fff;
     box-sizing: border-box;
     border-bottom: 1rpx solid #ccc;
+}
+.title-item {
+    flex: 1 1 0;
+}
+.title-right {
+    text-align: right;
 }
 .flex-container {
     position: absolute;
