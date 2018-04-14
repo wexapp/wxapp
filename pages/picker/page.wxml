@@ -1,0 +1,4 @@
+<custom-picker range="{{ range }}" bind:columnchange="onColumnChange"></custom-picker>
+<view style="height: 300vh">
+    Hello
+</view>

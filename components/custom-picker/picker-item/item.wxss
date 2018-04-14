@@ -1,0 +1,34 @@
+.com-wrapper {
+    position: relative;
+    height: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.mask {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    height: 270rpx;
+}
+.mask-top {
+    top: 0;
+    background-image: linear-gradient(to bottom, rgba(200, 200, 200, 1), rgba(200, 200, 200, .8));
+    border-bottom: 1rpx solid #ccc;
+}
+.mask-bottom {
+    bottom: 0;
+    background-image: linear-gradient(to top, rgba(200, 200, 200, 1), rgba(200, 200, 200, .8));
+    border-top: 1rpx solid #ccc;
+}
+.flex-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.flex-item {
+    height: 90rpx;
+    line-height: 90rpx;
+    text-align: center;
+    flex: 1 1 0;
+    box-sizing: border-box;
+}

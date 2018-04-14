@@ -35,7 +35,11 @@
 				{
 					"id": 0,
 					"name": "demo",
+<<<<<<< HEAD
 					"pathName": "pages/logs/logs",
+=======
+					"pathName": "pages/picker/page",
+>>>>>>> e9b5781551a3ef6e00de86c3f7766be2fd2345ba
 					"query": ""
 				},
 				{
