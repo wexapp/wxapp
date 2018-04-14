@@ -1,4 +1,5 @@
 <slot></slot>
+<view class="mask {{ active ? 'active' : '' }}"></view>
 <view class="picker-wrapper {{ active ? 'active' : '' }}" catchtouchmove="true">
     <view class="picker-title">
         <view class="title-item title-left"bindtap="cancel">取消</view>
