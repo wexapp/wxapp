@@ -1,0 +1,13 @@
+<scroll-view scroll-x="{{ true }}">
+    <view class="flex wrapper">
+        <view 
+            class="flex-item {{ value === index ? 'active' : '' }}" 
+            wx:for="{{ tabs }}" 
+            wx:key="{{ index }}"
+            data-index="{{ index }}"
+            catchtap="onItemTap"
+        >
+            {{ item }}
+        </view>
+    </view>
+</scroll-view>

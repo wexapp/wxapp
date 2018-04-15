@@ -1,0 +1,22 @@
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.flex-item {
+    flex-grow: 1;
+    padding: 0 20rpx;
+    line-height: 60rpx;
+    white-space: nowrap;
+    font-size: 28rpx;
+}
+.flex-item.active {
+    color: red;
+}
+.flex-item.active:after {
+    content: "";
+    border-bottom: 4rpx solid red;
+    display: block;
+    width: 100%;
+}

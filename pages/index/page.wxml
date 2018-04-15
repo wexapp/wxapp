@@ -1,0 +1,33 @@
+<!-- 头部内容部分 -->
+<swiper
+    class="swiper"
+    autoplay="{{ true }}" 
+    interval="{{ 7000 }}" 
+    duration="{{ 300 }}"
+>
+    <block wx:for="{{ imgs }}" wx:key="{{ index }}">
+        <swiper-item class="swiper-item">
+            <image src="{{ item }}" />
+        </swiper-item>
+    </block>
+</swiper>
+<view class="header-info">
+    恭迎品鉴
+</view>
+<adsorption bind:subscribe="onNavBarDidmount">
+    <nav-tabs 
+        class="header-nav-bar" 
+        tabs="{{ navbar.navs }}" 
+        value="{{ navbar.value }}" 
+        bind:change="onNavChange" 
+    />
+</adsorption>
+
+<!-- 内容主体部分 -->
+
+<view class="content">
+    <view class="content-title">
+        今日优选
+    </view>
+    <commodity-card class="commodity-item" wx:for="{{ commoditys }}" commodity="{{ item }}" wx:key="{{ index }}" />
+</view>

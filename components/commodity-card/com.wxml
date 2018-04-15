@@ -1,0 +1,16 @@
+<view class="card-wrapper">
+    <view class="img-wrapper">
+        <image class="commodity-image" src="{{ commodity.commodityImg }}"></image>
+        <image class="sub-image" src="{{ commodity.subImg }}" />
+    </view>
+    <view class="text-info">
+        <view class="text-flex-item title">{{ commodity.name }}</view>
+        <view class="text-flex-item sub-title">{{ commodity.info }}</view>
+        <view class="text-flex-item tag">{{ commodity.tag }}</view>
+        <view class="text-flex-item price">¥ {{ commodity.price }}</view>
+        <view class="text-flex-item vip-price">¥ {{ commodity.vipPrice }}</view>
+    </view>
+    <view class="cart">
+        <text class="iconfont icon-cart"></text>
+    </view>
+</view>
