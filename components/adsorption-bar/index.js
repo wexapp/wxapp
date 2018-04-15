@@ -1,8 +1,5 @@
 
 const componentMethods = {
-    switchtap() {
-        this.setData({ active: !this.data.active });
-    },
     init() {
         const query = wx.createSelectorQuery().in(this);
 
@@ -38,6 +35,9 @@ const componentData = {
 };
 
 Component({
+    properties: {
+        active: Boolean
+    },
     methods: componentMethods,
     data: componentData,
     ready() {

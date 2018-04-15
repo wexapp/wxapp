@@ -1,6 +1,6 @@
 <!--logs.wxml-->
 <view class="wrapper">
-    <block wx:for="{{ logs }}" wx:for-item="log">
+    <block wx:for="{{ logs }}" wx:for-item="log" wx:key="{{ index }}">
         <row text="{{ log }}" showBorder="{{ index < logs.length - 1 }}"></row>
     </block>
 </view>

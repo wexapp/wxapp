@@ -5,11 +5,7 @@
     style="height: {{ placeholderEleHeight }}px"
 >
 <!-- 吸附元素用来展示给用户，包裹传入的slot -->
-    <view 
-        id="adsorption" 
-        class="adsorption {{ placeholderEleTop < 0 ? 'fixed' : '' }}" 
-        bindtap="switchtap"
-    >
+    <view id="adsorption" class="adsorption {{ placeholderEleTop < 0 ? 'fixed' : '' }}">
         <slot />
     </view>
 </view>
