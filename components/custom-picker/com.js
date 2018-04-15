@@ -12,12 +12,12 @@ Component({
             const index = e.detail.index;
             const column = e.currentTarget.dataset.column;
 
+            this.value[column] = index;
             this.triggerEvent('columnchange', { 
                 index,
                 column
             });
 
-            this.value[column] = index;
         },
         ensure(e) {
             this.triggerEvent('change', { value: this.value });
@@ -27,9 +27,6 @@ Component({
         }
     },
     ready() {
-        this.value = [];
-        this.data.range.forEach(item => {
-            this.value.push(item.active || 0);
-        });
+        this.value = this.data.value;
     }
 });

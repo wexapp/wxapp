@@ -8,9 +8,9 @@ Component({
         value: Array
     },
     methods: {
-        bindChange(e) {
+        onChange(e) {
             const value = e.detail.value;
-
+            
             for(let i = 0, len = value.length; i < len; i++) {
                 if(value[i] !== this.value[i]) {
                     this.value = value;

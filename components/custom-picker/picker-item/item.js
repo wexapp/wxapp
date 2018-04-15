@@ -25,7 +25,7 @@ Component({
         },
         touchend(e) {
             if(this.isStart) return;
-            let index = this.data.value || 0;
+            let index = 0;
             let rangeLength = this.data.range.length;
             // 记录手指滑动时间，用来计算缓冲距离
             this.time = e.timeStamp - this.starTime;
@@ -47,20 +47,16 @@ Component({
             // 这是滚到底部了
             if(this.top < -(this.height - this.minHeight)) {
                 this.top = -(this.height - this.minHeight);
-                index = this.data.range.length - 1;
+                index = rangeLength - 1;
             }
 
             // 修正index值
-            if(index !== this.data.range.length - 1) {
+            if(index !== rangeLength - 1) {
                 index = Math.floor(Math.abs((this.top - this.initialTopValue ) / this.itemHeight));
-            }
-
-            
-            // 最后一个不用修正
-            if(index !== this.data.range.length - 1) {
+                // 最后一个top不用修正
                 this.top += this.correctValue * index;
             }
-            
+
             if(this.height <= this.minHeight) {
                 this.top = Math.max(this.top, this.minHeight - this.height);
             }
@@ -70,7 +66,7 @@ Component({
             this.setData({
                 animationData: this.animation.export()
             });
-
+            
             this.triggerEvent('columnchange', { index: index });
         }
     },
@@ -93,8 +89,10 @@ Component({
 
         const query = wx.createSelectorQuery().in(this)
         query.select('#flex-wrapper').boundingClientRect((res) => {
+            const value = this.data.value || 0;
+
             this.height = res.height;
-            this.top = this.initialTopValue - this.data.value * this.itemHeight + this.correctValue * this.data.value;
+            this.top = this.initialTopValue - value * this.itemHeight + this.correctValue * value;
 
             this.setData({
                 transYValue: this.top

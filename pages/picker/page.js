@@ -21,5 +21,8 @@ Page({
     },
     onCancel(e) {
         this.setData({ active: false });
+    },
+    onShow() {
+        this.setData({ value: [1, 2, 3, 4] });
     }
 });

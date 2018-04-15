@@ -9,7 +9,7 @@
         </view>
         <view class="title-item title-right" bindtap="ensure">确定</view>
     </view>
-    <picker-view class="picker-view" value="{{ value }}" bindchange="bindChange">
+    <picker-view class="picker-view" value="{{ value }}" bindchange="onChange">
         <picker-view-column wx:for="{{ range }}" wx:key="{{ index }}">
             <view wx:for="{{ item }}" class="picker-item" wx:key="{{ index }}">
                 <view class="text">{{ item }}</view>
