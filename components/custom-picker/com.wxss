@@ -57,6 +57,6 @@
     flex-direction: row;
     background-color: #fff;
 }
-.picker-colum-item {
+.picker-column-item {
     flex: 1 1 0;
 }

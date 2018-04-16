@@ -1,8 +1,8 @@
-<swiper indicator-dots="{{indicatorDots}}"
-  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-  <block wx:for="{{imgUrls}}">
-    <swiper-item  style="width: 90%!important">
-      <image src="{{item}}" class="slide-image" width="355" height="150"/>
-    </swiper-item>
-  </block>
-</swiper>
+<view style="height: 100vh">
+    <slide-left></slide-left>
+</view>
+<adsorption bind:subscribe="onNavBarDidmount">
+    <drop-sort sorts="{{ [1, 2, 3, 4, 5, 6, 7] }}" bind:choose="onChoose" active="{{ active }}" value="{{ value }}"></drop-sort>
+</adsorption>
+
+<view style="height: 100vh">12121</view>

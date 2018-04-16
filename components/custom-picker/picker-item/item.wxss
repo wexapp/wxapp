@@ -35,3 +35,7 @@
     text-align: center;
     box-sizing: border-box;
 }
+
+.flex-item.active {
+    color: red;
+}

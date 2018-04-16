@@ -1,13 +1,13 @@
 <slot></slot>
 <view class="mask {{ active ? 'active' : '' }}"></view>
-<view class="picker-wrapper {{ active ? 'active' : '' }}" catchtouchmove="true">
+<view class="picker-wrapper {{ active ? 'active' : '' }}" catchtouchmove="move">
     <view class="picker-title">
         <view class="title-item title-left" bindtap="cancel">取消</view>
         <view class="title-item title-right" bindtap="ensure">确定</view>
     </view>
     <view class="flex-container">
         <picker-item 
-            class="picker-colum-item" 
+            class="picker-column-item" 
             value="{{ value[index] }}" 
             bind:columnchange="onColumnChange"
             wx:for="{{ range }}" 

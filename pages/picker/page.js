@@ -7,7 +7,7 @@ Page({
             ['10:00', '11:00', '12:00', '13:00', '14:00', '15:00']
         ],
         active: true,
-        value: [1, 2, 3, 4]
+        value: [1, 1, 1, 1]
     },
     btntap(e) {
         this.setData({ active: true });
@@ -16,13 +16,15 @@ Page({
         console.log(e.detail);
     },
     onChange(e) {
-        this.setData({ active: false });
-        this.setData({ value: e.detail.value });
+        this.setData({ active: false, value: e.detail.value });
     },
     onCancel(e) {
         this.setData({ active: false });
     },
     onShow() {
-        this.setData({ value: [1, 2, 3, 4] });
+        // this.setData({ value: [1, 2, 3, 4] });
+    },
+    onUnload() {
+        console.log(this.data.value);
     }
 });

@@ -1,7 +1,22 @@
 Component({
     properties: {
-        range: Array,
-        value: Number
+        value: {
+            type: Number,
+            observer(newVal, oldVal) {
+                if(newVal === oldVal || !this.didMount) return;
+
+                this.update();
+            }
+        },
+        range: {
+            type: Array,
+            value: [],
+            observer(newRange, oldRange) {
+                if(newRange.length === oldRange.length || !this.didMount) return;
+
+                this.update();
+            }
+        }
     },
     data: {
         animationData: {},
@@ -27,9 +42,12 @@ Component({
             if(this.isStart) return;
             let index = 0;
             let rangeLength = this.data.range.length;
+
+            let flexHeight = this.itemHeight * rangeLength;
+
             // 记录手指滑动时间，用来计算缓冲距离
             this.time = e.timeStamp - this.starTime;
-            const bufferFactor = (Math.abs(this.diffY) / this.time) * 10;
+            const bufferFactor = (Math.abs(this.diffY) / this.time) * 8;
 
             this.top = this.top + this.diffY / this.pixelRatio * bufferFactor;
             
@@ -45,8 +63,8 @@ Component({
             }
 
             // 这是滚到底部了
-            if(this.top < -(this.height - this.minHeight)) {
-                this.top = -(this.height - this.minHeight);
+            if(this.top < -(flexHeight - this.minHeight)) {
+                this.top = -(flexHeight - this.minHeight);
                 index = rangeLength - 1;
             }
 
@@ -57,46 +75,47 @@ Component({
                 this.top += this.correctValue * index;
             }
 
-            if(this.height <= this.minHeight) {
+            if(flexHeight <= this.minHeight) {
                 this.top = Math.max(this.top, this.minHeight - this.height);
             }
 
             this.animation.translate3d(0, this.top, 0).step({ duration: Math.min(50 * rangeLength, 1000) });
 
             this.setData({
-                animationData: this.animation.export()
+                animationData: this.animation.export(),
+                activeIndex: index
             });
             
             this.triggerEvent('columnchange', { index: index });
+        },
+        update() {
+            const value = this.data.value || 0;
+
+            this.top = this.initialTopValue - value * this.itemHeight + this.correctValue * value;
+            this.animation.translate3d(0, this.top, 0).step({ duration: 300 });
+            this.setData({
+                transYValue: this.top,
+                activeIndex: value,
+                animationData: this.animation.export()
+            });
         }
     },
     ready(e) {
         const device = wx.getSystemInfoSync();
-        this.pixelRatio = 750 / device.windowWidth;
 
+        this.didMount = true;
+        this.pixelRatio = 750 / device.windowWidth;
         this.itemHeight = 90 / this.pixelRatio;
         this.minHeight = 360 / this.pixelRatio;
         this.initialTopValue = 270 / this.pixelRatio;
 
         this.top = this.initialTopValue;
         this.correctValue = this.itemHeight - Math.floor(this.itemHeight);
-        const animation = wx.createAnimation({
+        this.animation = wx.createAnimation({
             duration: 0,
             timingFunction: 'ease',
         });
-    
-        this.animation = animation;
 
-        const query = wx.createSelectorQuery().in(this)
-        query.select('#flex-wrapper').boundingClientRect((res) => {
-            const value = this.data.value || 0;
-
-            this.height = res.height;
-            this.top = this.initialTopValue - value * this.itemHeight + this.correctValue * value;
-
-            this.setData({
-                transYValue: this.top
-            });
-        }).exec();
+        this.update();
     }
 });

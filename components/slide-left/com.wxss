@@ -1,0 +1,10 @@
+.wrapper {
+    position: relative;
+    width: 100%;
+}
+.del-btn {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    bottom: 0;
+}

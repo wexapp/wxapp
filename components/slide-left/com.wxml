@@ -1,0 +1,6 @@
+<view class="wrapper">
+    <view class="left" style="height: 200rpx;">
+        1212
+    </view>
+    <view class="del-btn">121</view>
+</view>

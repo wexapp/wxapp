@@ -1,17 +1,21 @@
 Component({
     properties: {
-        isActive: Boolean,
+        active: Boolean,
         sorts: Array,
-        activeIndex: Number
+        value: Number
     },
     methods: {
-        sorttap: function () {
-            this.triggerEvent('choose', { isActive: this.data.isActive });
+        sorttap: function (e) {
+            console.log(e)
+            this.triggerEvent('choose', { active: this.data.active });
         },
         itemtap: function (e) {
-            const activeIndex = e.currentTarget.dataset.unique;
+            const value = e.currentTarget.dataset.unique;
 
-            this.triggerEvent('choose', { isActive: this.data.isActive, activeIndex });
+            this.triggerEvent('choose', { active: this.data.active, value });
+        },
+        move() {
+            return false;
         }
     }
 });

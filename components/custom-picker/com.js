@@ -4,9 +4,6 @@ Component({
         active: Boolean,
         value: Array
     },
-    data: {
-        active: false
-    },
     methods: {
         onColumnChange(e) {
             const index = e.detail.index;
@@ -19,6 +16,9 @@ Component({
             });
 
         },
+        move(e) {
+            return false;
+        },
         ensure(e) {
             this.triggerEvent('change', { value: this.value });
         },
@@ -28,5 +28,6 @@ Component({
     },
     ready() {
         this.value = this.data.value;
+        console.log(this.data.value);
     }
 });
