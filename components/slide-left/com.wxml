@@ -1,6 +1,16 @@
-<view class="wrapper">
-    <view class="left" style="height: 200rpx;">
-        1212
+<view 
+    class="wrapper" 
+    bindtouchstart="touchstart" 
+    bindtouchmove="touchmove" 
+    bindtouchend="touchend" 
+    animation="{{ animationData }}"
+>
+    <view class="left">
+        <slot></slot>
     </view>
-    <view class="del-btn">121</view>
+    <view class="right" bindtap="onDelete">
+        <view class="text">
+            删除
+        </view>
+    </view>
 </view>

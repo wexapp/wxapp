@@ -1,0 +1,5 @@
+<view>
+    <view bindtap="mylis">my-component</view>
+    <slot></slot>
+    <view class="behavior" bindtap="">behavior</view>
+</view>

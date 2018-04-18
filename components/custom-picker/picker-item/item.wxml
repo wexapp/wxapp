@@ -10,9 +10,8 @@
         id="flex-wrapper"
         class="flex-wrapper"
         animation="{{ animationData }}"
-        style="transform: translate3d(0, {{ transYValue }}px, 0);"
     >
-        <view class="flex-item {{ activeIndex === index ? 'active' : '' }}" wx:for="{{ range }}" wx:key="{{ index }}">
+        <view class="flex-item {{ activeIndex === index ? 'active' : '' }}" wx:for="{{ config.range }}" wx:key="{{ index }}">
             {{ item }}
         </view>
     </view>

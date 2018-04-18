@@ -2,7 +2,13 @@ Component({
     properties: {
         range: Array,
         active: Boolean,
-        value: Array
+        value: {
+            type: Array,
+            value: [],
+            observer(newValue) {
+                this.value = [...newValue];
+            }
+        }
     },
     methods: {
         onColumnChange(e) {
@@ -10,6 +16,7 @@ Component({
             const column = e.currentTarget.dataset.column;
 
             this.value[column] = index;
+            
             this.triggerEvent('columnchange', { 
                 index,
                 column
@@ -25,9 +32,5 @@ Component({
         cancel(e) {
             this.triggerEvent('cancel');
         }
-    },
-    ready() {
-        this.value = this.data.value;
-        console.log(this.data.value);
     }
 });

@@ -1,0 +1,10 @@
+<view class="mask {{ active ? 'active' : '' }}" catchtouchmove="move"></view>
+<view class="drawer-wrapper {{ active ? 'active' : '' }}">
+    <view class="drawer-title">
+        <view class="title-item title-left" bindtap="cancel">取消</view>
+        <view class="title-item title-middle" bindtap="cancel">取消</view>
+        <view class="title-item title-right" bindtap="ensure">确定</view>
+    </view>
+    <view class="my-class">212121</view>
+    <slot></slot>
+</view>

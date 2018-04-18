@@ -1,0 +1,4 @@
+<view bindcustomevent="another">
+    <view>another</view>
+    <slot></slot>
+</view>

@@ -1,8 +1,26 @@
-<view style="height: 100vh">
-    <slide-left></slide-left>
+<!-- <view style="border-bottom: 2rpx solid red" wx:for="{{ arr }}" wx:key="{{ item.id }}" bindtap="onDelete" data-test="{{ item.id }}" >
+    <slide-left flag="{{ item.id }}">
+        <view>{{ item.name }}</view>
+        <view>{{ item.name }}</view>
+        <view>{{ item.name }}</view>
+        <view>{{ item.name }}</view>
+    </slide-left>
 </view>
 <adsorption bind:subscribe="onNavBarDidmount">
     <drop-sort sorts="{{ [1, 2, 3, 4, 5, 6, 7] }}" bind:choose="onChoose" active="{{ active }}" value="{{ value }}"></drop-sort>
-</adsorption>
+</adsorption> -->
+<!-- <button bindtap="open">121</button>
+<drawer active="{{ active }}" my-class="red-class">
+    <view>222222</view>
+    <view style="height: 300rpx;">
+        11111
+    </view>
+</drawer> -->
 
-<view style="height: 100vh">12121</view>
+<another-component bind:customevent="lsone">
+    <view>00000</view>
+    <my-component bind:customevent="lstwo">
+        <view>11111111</view>
+        <view bindtap="custom">触发时间custom</view>
+    </my-component>
+</another-component>

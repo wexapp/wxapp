@@ -4,6 +4,9 @@
     "usingComponents": {
         "adsorption": "../../components/adsorption-bar/index",
         "drop-sort": "../../components/drop-sort/index",
-        "slide-left": "../../components/slide-left/com"
+        "slide-left": "../../components/slide-left/com",
+        "drawer": "../../components/bottom-drawer/com",
+        "another-component": "/components/event/another-component/com",
+        "my-component": "/components/event/my-component/com"
     }
 }

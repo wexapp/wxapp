@@ -3,7 +3,6 @@
 		"pages/index/page",
 		"pages/demo/page",
 		"pages/swiper/page",
-		"pages/logs/logs",
 		"pages/picker/page",
 		"pages/picker/new-picker/page"
 	],

@@ -2,9 +2,25 @@
     position: relative;
     width: 100%;
 }
-.del-btn {
+.right {
     position: absolute;
     top: 0;
-    left: 100%;
     bottom: 0;
+    right: -200rpx;
+    width: 300rpx;
+    background: red;
+    z-index: -1;
+}
+
+.left {
+    background: #ccc;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    right: 60rpx;
+    transform: translateY(-50%);
+    font-size: 28rpx;
+    color: #fff;
 }
