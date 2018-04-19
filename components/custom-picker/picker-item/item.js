@@ -7,6 +7,7 @@ const config = {
     observer(newVal, oldVal) {
         // 值发生变化需要更新ui
         if(newVal.range.length === oldVal.range.length) return;
+        
         this.update();
     }
 };
@@ -43,7 +44,7 @@ Component({
 
             // 记录手指滑动时间，用来计算缓冲距离
             this.time = e.timeStamp - this.starTime;
-            const bufferFactor = Math.abs(this.diffY) / this.time * 5;
+            const bufferFactor = Math.abs(this.diffY) / this.time * rangeLength / 3;
 
             this.top = this.top + this.diffY / this.pixelRatio * Math.max(bufferFactor, 1);
             

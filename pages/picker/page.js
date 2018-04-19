@@ -13,12 +13,12 @@ Page({
         this.setData({ active: true });
     },
     onColumnChange(e) {
-        let column = e.detail.column;
-        if(e.detail.column === 2) {
-            this.data.range[column + 1] = this.data.range[column + 1].slice(1, 5);
-        }
+        // let column = e.detail.column;
+        // if(e.detail.column === 2) {
+        //     this.data.range[column + 1] = this.data.range[column + 1].slice(1, 5);
+        // }
 
-        this.setData({ range: this.data.range });
+        // this.setData({ range: this.data.range });
     },
     onChange(e) {
         this.setData({ active: false, value: e.detail.value });

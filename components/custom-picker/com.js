@@ -5,6 +5,7 @@ Component({
             value: [],
             observer(newValue, oldValue) {
                 if(!this.didMount) return;
+
                 // 这里也需要监视range长度变化，避免出现无效值
                 this.update();
             }
@@ -19,16 +20,15 @@ Component({
         onColumnChange(e) {
             const index = e.detail.index;
             const column = e.currentTarget.dataset.column;
-            this.update();
 
             // 变化的列要更新
-            this.data.tmpValue[column] = index;
             
             this.triggerEvent('columnchange', { 
                 index,
                 column
             });
-            this.setData({ tmpValue: this.data.tmpValue });
+            // 这里无需setData， 父级更新会带动这里
+            this.data.tmpValue[column] = index;
         },
         update() {
             // 这是为了其他列变短时能够取到值，否则原来value是10，变短后列长度变成2，10就是非法值了，在此更新
@@ -47,6 +47,9 @@ Component({
         },
         cancel(e) {
             this.triggerEvent('cancel');
+        },
+        move() {
+            return false;
         }
     },
     attached() {
