@@ -7,6 +7,8 @@
         "slide-left": "../../components/slide-left/com",
         "drawer": "../../components/bottom-drawer/com",
         "another-component": "/components/event/another-component/com",
-        "my-component": "/components/event/my-component/com"
+        "my-component": "/components/event/my-component/com",
+        "ul": "./custom-ul/ul",
+        "li": "./custom-li/li"
     }
 }

@@ -1,5 +1,7 @@
-<view>
+<form bindsubmit="submit">
     <view bindtap="mylis">my-component</view>
     <slot></slot>
-    <view class="behavior" bindtap="">behavior</view>
-</view>
+    <button formType="submit">Submit</button>
+    <button formType="reset">Reset</button>
+</form>
+

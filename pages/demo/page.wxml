@@ -24,3 +24,9 @@
         <view bindtap="custom">触发时间custom</view>
     </my-component>
 </another-component>
+
+
+<ul>
+<li></li>
+<li></li>
+</ul>

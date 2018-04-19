@@ -1,8 +1,12 @@
 const config = {
     type: Object,
-    value: {},
-    observer() {
+    value: {
+        range: [],
+        value: Number
+    },
+    observer(newVal, oldVal) {
         // 值发生变化需要更新ui
+        if(newVal.range.length === oldVal.range.length) return;
         this.update();
     }
 };
@@ -67,12 +71,13 @@ Component({
         },
         update() {
             if(!this.animation) return;
-            const value = this.data.config.value || 0;
+            
+            let value = this.data.config.value || 0;
+            value = Math.min(value, this.data.config.range.length - 1);
 
             this.top = this.initialTopValue - value * this.itemHeight + this.correctValue * value;
             this.animation.translate3d(0, this.top, 0).step({ duration: 300 });
             this.setData({
-                // transYValue: this.top,
                 activeIndex: value,
                 animationData: this.animation.export()
             });

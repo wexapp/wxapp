@@ -8,7 +8,7 @@
     <view class="flex-container">
         <picker-item 
             class="picker-column-item" 
-            config="{{ {value: value[index], range: item } }}"
+            config="{{ {value: tmpValue[index], range: item } }}"
             bind:columnchange="onColumnChange"
             wx:for="{{ range }}" 
             wx:key="{{ index }}"
