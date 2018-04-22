@@ -30,7 +30,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 2,
 			"list": [
 				{
 					"id": 0,
@@ -42,6 +42,12 @@
 					"id": 1,
 					"name": "轮播",
 					"pathName": "pages/demo/page",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "game",
+					"pathName": "pages/swiper/page",
 					"query": ""
 				}
 			]

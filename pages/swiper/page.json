@@ -1,9 +1,5 @@
 {
-    "navigationBarTitleText": "swiper",
+    "navigationBarTitleText": "新俄罗斯方块",
     "navigationBarTextStyle": "black",
-    "backgroundColor": "#eeeeee",
-    "usingComponents": {
-        "adsorption": "../../components/adsorption-bar/index",
-        "swiper": "../../components/swiper/cmp"
-    }
+    "backgroundColor": "#eeeeee"
 }

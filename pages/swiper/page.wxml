@@ -1,8 +1,10 @@
-<view class="swiper-container">
-    <swiper frames="{{ [1, 2, 3, 4] }}">
-        <view slot="0" class="item">1</view>
-        <view slot="1" class="item">2</view>
-        <view slot="2" class="item">3</view>
-        <view slot="3" class="item">4</view>
-    </swiper>
+<view class="page-wrapper" bindtouchmove="stoptouchmove">
+    <view class="title">
+        新俄罗斯方块
+    </view>
+    <view class="wrapper" bindtap="onTap">
+        <view wx:for="{{ grids }}" class="grid {{ item.status === 'active' ? 'active' : '' }}" wx:key="{{ index }}">{{ index + 1 }}</view>
+    </view>
+    <view class="mask mask-up" bindtap="onHandleDeirect"></view>
+    <view class="mask mask-down" bindtap="onChangeShape"></view>
 </view>

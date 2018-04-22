@@ -60,3 +60,5 @@ Component({
         this.didMount = true;
     }
 });
+
+// 还有一种方案，在列变的时候修正超出范围的value

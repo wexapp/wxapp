@@ -19,14 +19,8 @@
 
 <another-component bind:customevent="lsone">
     <view>00000</view>
-    <my-component bind:customevent="lstwo">
+    <my-component bind:customevent="lstwo" title="123" data-title="888">
         <view>11111111</view>
         <view bindtap="custom">触发时间custom</view>
     </my-component>
 </another-component>
-
-
-<ul>
-<li></li>
-<li></li>
-</ul>
