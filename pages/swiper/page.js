@@ -145,10 +145,10 @@ Page({
     },
     onChangeShape(e) {
         if(e.detail.x > this.windowWidth / 2) {
-            const origin = indexToCoordinate(this.movings[0]);
+            const origin = indexToCoordinate(this.movings[1]);
             const points = [];
 
-            for(let i = 1, len = this.movings.length; i < len; i++) {
+            for(let i = 0, len = this.movings.length; i < len; i++) {
                 const point = indexToCoordinate(this.movings[i]);
 
                 const [x, y] = coordinateChange(origin, point);
@@ -158,7 +158,7 @@ Page({
                     points.push([x, y]);
                 }
             }
-            points.unshift(origin);
+            // points.unshift(origin);
             
             const tmpMovings = points.map((item) => {
                 return item[0] + item[1] * 15;
