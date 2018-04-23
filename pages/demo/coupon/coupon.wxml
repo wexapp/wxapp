@@ -1,0 +1,12 @@
+<view class="flex">
+    <view class="left" style="background-color: {{ bgcolor }}">
+        <view class="price">{{ price }}</view>
+        <view class="text">满{{ limit }}元可使用</view>
+    </view>
+    <view class="right">
+        <view>{{ text }}</view>
+        <view>有效期至：{{ date }}</view>
+    </view>
+    <view class="circle top"></view>
+    <view class="circle bottom"></view>
+</view>

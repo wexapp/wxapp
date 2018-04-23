@@ -145,6 +145,10 @@ Page({
     },
     onChangeShape(e) {
         if(e.detail.x > this.windowWidth / 2) {
+            const start = indexToCoordinate(this.movings[1]);
+            const end = indexToCoordinate(this.movings[3]);
+            // const origin = [(start[0] + end[0]) / 2, (start[1] + end[1]) / 2];
+
             const origin = indexToCoordinate(this.movings[1]);
             const points = [];
 
@@ -158,11 +162,9 @@ Page({
                     points.push([x, y]);
                 }
             }
-            // points.unshift(origin);
             
-            const tmpMovings = points.map((item) => {
-                return item[0] + item[1] * 15;
-            });
+            const tmpMovings = points.map((item) => item[0] + item[1] * 15)
+                                     .sort((a, b) => a - b);
 
             if(Math.min(...tmpMovings) < 0 || Math.max(...tmpMovings) > 284) {
                 return;

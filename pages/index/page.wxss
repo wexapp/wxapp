@@ -37,3 +37,8 @@ page {
     padding-bottom: 30rpx;
     margin-top: 30rpx;
 }
+
+.coupon {
+    display: block;
+    margin-bottom: 20px;
+}

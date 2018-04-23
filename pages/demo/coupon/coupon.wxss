@@ -1,0 +1,59 @@
+.flex {
+    position: relative;
+    display: flex;
+    border-radius: 8rpx;
+    overflow: hidden;
+    background: #fff;
+}
+
+.left {
+    background: blue;
+    color: #fff;
+    text-align: center;
+    width: 200rpx;
+    height: 200rpx;
+}
+.left .price {
+    font-size: 48rpx;
+    margin-top: 40rpx;
+}
+.left .price:before {
+    content: "¥ ";
+    font-size: 24rpx;
+}
+.left .text {
+    font-size: 20rpx;
+}
+
+
+
+.right {
+    flex: 1 1 0;
+    padding-top: 50rpx;
+    padding-left: 50rpx;
+    font-size: 24rpx;
+    color: #ccc;
+}
+
+.right > view:first-child {
+    font-size: 28rpx;
+    margin-bottom: 1em;
+    color: #333;
+}
+
+.circle {
+    position: absolute;
+    width: 24rpx;
+    height: 24rpx;
+    left: 190rpx;
+    background: #ccc;
+    border-radius: 50%;
+}
+
+.circle.top {
+    top: -12rpx;
+}
+
+.circle.bottom {
+    bottom: -12rpx;
+}

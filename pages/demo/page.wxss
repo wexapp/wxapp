@@ -1,5 +1,6 @@
 page {
     background: #ccc;
+    padding-top: 20px;
 }
 swiper-item {
     position: relative;
@@ -16,4 +17,10 @@ swiper {
 
 .red-class {
     color: red;
+}
+
+
+.coupon {
+    margin-bottom: 20px;
+    display: block;
 }

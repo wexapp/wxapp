@@ -9,6 +9,7 @@
         "another-component": "/components/event/another-component/com",
         "my-component": "/components/event/my-component/com",
         "ul": "./custom-ul/ul",
-        "li": "./custom-li/li"
+        "li": "./custom-li/li",
+        "coupon": "./coupon/coupon"
     }
 }

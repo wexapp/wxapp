@@ -16,11 +16,13 @@
         11111
     </view>
 </drawer> -->
-
+<!-- 
 <another-component bind:customevent="lsone">
     <view>00000</view>
     <my-component bind:customevent="lstwo" title="123" data-title="888">
         <view>11111111</view>
         <view bindtap="custom">触发时间custom</view>
     </my-component>
-</another-component>
+</another-component> -->
+<coupon class="coupon" price="100" limit="50" text="百联商家优惠券" date="2019-11-11" bgcolor="pink"></coupon>
+<coupon class="coupon" price="21" limit="30" text="百联商家优惠券" date="2019-11-11"></coupon>
