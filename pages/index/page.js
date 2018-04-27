@@ -21,5 +21,10 @@ Page({
     },
     onPageScroll(e) {
         this.publishScrollEvent && this.publishScrollEvent(e);
+    },
+    onPullDownRefresh() {
+        setTimeout(() => {
+            wx.stopPullDownRefresh();
+        }, 1000)
     }
 });

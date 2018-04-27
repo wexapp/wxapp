@@ -2,14 +2,37 @@
 	"pages":[
 		"pages/index/page",
 		"pages/demo/page",
-		"pages/swiper/page",
+		"pages/game/page",
 		"pages/picker/page",
 		"pages/picker/new-picker/page"
 	],
 	"window": {
-		"backgroundTextStyle": "light",
+		"backgroundTextStyle": "black",
 		"navigationBarBackgroundColor": "#fff",
 		"navigationBarTitleText": "WeChat",
-		"navigationBarTextStyle": "black"
+		"navigationBarTextStyle": "black",
+		"backgroundColor": "#eee"
+	},
+	"tabBar": {
+		"color": "#333",
+		"selectedColor": "#0089ff",
+		"borderStyle": "white",
+		"position": "bottom",
+		"list": [{
+			"pagePath": "pages/index/page",
+			"text": "Ella购物",
+			"selectedIconPath": "assets/tabbar/shop.png",
+			"iconPath": "assets/tabbar/shop.png"
+		}, {
+			"pagePath": "pages/game/page",
+			"text": "小游戏",
+			"selectedIconPath": "assets/tabbar/game.jpg",
+			"iconPath": "assets/tabbar/game.jpg"
+		}, {
+			"pagePath": "pages/demo/page",
+			"text": "Demo",
+			"selectedIconPath": "assets/tabbar/selected.jpg",
+			"iconPath": "assets/tabbar/selected.jpg"
+		}]
 	}
 }

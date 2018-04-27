@@ -3,6 +3,7 @@
     "backgroundColor": "#cccccc",
     "usingComponents": {
         "adsorption": "../../components/adsorption-bar/index",
+        "my-button": "../../components/button/com",
         "drop-sort": "../../components/drop-sort/index",
         "slide-left": "../../components/slide-left/com",
         "drawer": "../../components/bottom-drawer/com",

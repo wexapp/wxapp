@@ -1,0 +1,1 @@
+<button loading="{{ loading }}" bindtap="onTap"><slot></slot>{{myProperty}}</button>

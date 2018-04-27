@@ -24,3 +24,7 @@ swiper {
     margin-bottom: 20px;
     display: block;
 }
+
+image {
+    width: 300rpx;
+}

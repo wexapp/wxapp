@@ -3,12 +3,7 @@ Component({
         range: {
             type: Array,
             value: [],
-            observer(newValue, oldValue) {
-                if(!this.didMount) return;
-
-                // 这里也需要监视range长度变化，避免出现无效值
-                this.update();
-            }
+            observer: 'update'
         },
         active: Boolean,
         value: Array
@@ -31,6 +26,8 @@ Component({
             this.data.tmpValue[column] = index;
         },
         update() {
+            if(!this.didMount) return;
+
             // 这是为了其他列变短时能够取到值，否则原来value是10，变短后列长度变成2，10就是非法值了，在此更新
             this.data.tmpValue = this.data.tmpValue.map((item, i) => {
                 if(item > this.data.range[i].length - 1) {

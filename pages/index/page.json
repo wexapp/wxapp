@@ -1,6 +1,7 @@
 {
     "navigationBarTitleText": "Ella购物",
     "backgroundColor": "#cccccc",
+    "enablePullDownRefresh": true,
     "usingComponents": {
         "adsorption": "../../components/adsorption-bar/index",
         "nav-tabs": "../../components/nav-tabs/com",

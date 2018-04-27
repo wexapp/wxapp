@@ -1,44 +1,45 @@
 Page({
     data: {
-        active: false,
-        value: 0,
-        arr: [
-            { id: 'a', name: 'a' },
-            { id: 'b', name: 'b' },
-            { id: 'c', name: 'c' },
-            { id: 'd', name: 'd' },
-            { id: 'e', name: 'e' },
-            { id: 'f', name: 'f' },
-        ]
+        radios: [
+            { name: 'china', text: '中国' },
+            { name: 'usa', text: '美国' }
+        ],
+        myProperty: ''
     },
-    // onChoose(e) {
-    //     this.setData({ active: !e.detail.active });
-    // },
-    // onPageScroll(e) {
-    //     this.publishScrollEvent && this.publishScrollEvent(e);
-    // },
-    // onNavBarDidmount(e) {
-    //     this.publishScrollEvent = e.detail.onload;
-    // },
-    // onDelete(e) {
-    //     const id = e.currentTarget.dataset.test;
-    //     // this.data.arr = this.data.arr.filter((item) => item.id !== id);
-    //     this.data.arr.sort(() => 1)
-    //     setTimeout(() => {
-    //         this.setData({ arr: this.data.arr });
-    //     }, 1000)
-    // },
-    // open() {
-    //     this.setData({ active: true })
-    // }
-    lsone() {
-        console.log('lsone');
+    onChangeText() {
+        this.setData({
+            'array[0].text': '1111'
+        })
     },
-    lstwo() {
-        console.log('lstwo');
+    onChange(e) {
+        console.log(e);
     },
-    custom() {
-        console.log(1)
-        this.triggerEvent('customevent', {}, { bubbles: true, composed: true });
+    getUserInfo(e) {
+        console.log(e);
+    },
+    action() {
+        console.log('action');
+    },
+    change(e) {
+        this.num = this.num || 1;
+        this.setData({ myProperty:  this.num++});
+    },
+    onLoad(e) {
+        console.log('Page onload: ', e);
+    },
+    onShow(e) {
+        console.log('Page onshow: ', e);
+    },
+    onHide(e) {
+        console.log('Page onhide: ', e);
+    },
+    onReady(e) {
+        console.log('Page onready: ', e);
+    },
+    onReachBottom(e) {
+        console.log('Page onReachBottom: ', e);
+    },
+    onShareAppMessage(e) {
+        console.log(e);
     }
-})
+});
