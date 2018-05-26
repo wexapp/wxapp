@@ -1,14 +1,14 @@
 {
 	"description": "项目配置文件。",
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "1.9.94",
+	"libVersion": "2.0.0",
 	"appid": "wxa5531f523a3bc21c",
 	"projectname": "demo",
 	"isGameTourist": false,
@@ -45,9 +45,9 @@
 					"query": ""
 				},
 				{
-					"id": -1,
+					"id": 2,
 					"name": "game",
-					"pathName": "pages/swiper/page",
+					"pathName": "pages/game/page",
 					"query": ""
 				}
 			]

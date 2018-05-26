@@ -1,0 +1,3 @@
+<view>Helelo
+<slot></slot>
+</view>

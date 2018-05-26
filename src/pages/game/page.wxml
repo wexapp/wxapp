@@ -3,7 +3,13 @@
         新俄罗斯方块
     </view>
     <view class="wrapper" bindtap="onTap">
-        <view wx:for="{{ grids }}" class="grid {{ item.status === 'active' ? 'active' : '' }}" wx:key="{{ index }}">{{ index + 1 }}</view>
+        <view 
+            wx:for="{{ grids }}" 
+            class="grid {{ item.status === 'active' ? 'active' : '' }}" 
+            wx:key="{{ index }}"
+        >
+            {{ index + 1 }}
+        </view>
     </view>
     <view class="mask mask-up" bindtap="onHandleDeirect"></view>
     <view class="mask mask-down" bindtap="onChangeShape"></view>

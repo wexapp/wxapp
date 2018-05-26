@@ -1,22 +1,57 @@
 import { setGrids, shape, indexToCoordinate, coordinateToIndex, isCross, coordinateChange } from './util';
 
 
-
-
 Page({
     data: {
         grids: [],
         actives: []
     },
     randomIndex() {
-        return shape(Math.ceil(Math.random() * 12));
+        // return shape(Math.ceil(Math.random() * 12));
+        return shape(1);
     },
     onLoad() {
-        this.setData({ grids: setGrids(20, 15) });
+        this.rows = 20;
+        this.columns = 15;
+
+        this.setData({ grids: setGrids(this.rows, this.columns) });
         this.movings = this.randomIndex();
         this.init();
         this.actives = [];
         this.windowWidth = wx.getSystemInfoSync().windowWidth;
+    },
+    checkScore() {
+        for(let r = 0; r < this.rows; r++) {
+            let flag = true;
+
+            inner: for(let i = 0; i < this.columns; i++) {
+                if(this.data.grids[r * this.columns + i].status !== 'active') {
+                    flag = false;
+                    break inner;
+                }
+            }
+
+            if(flag) {
+                console.log(r);
+                // 下移该得分行上面的行
+                for(let i = 0, tar = r * this.columns; i < tar; i++) {
+                    this.actives[i] += this.columns;
+                }
+
+                // 清除该行
+                this.actives.splice(r * this.columns, this.columns);
+            }
+        }
+
+        this.data.grids.forEach(item => {
+            item.status = 'none';
+        });
+
+        this.actives.forEach(item => {
+            this.data.grids[item].status = 'active';
+        });
+
+        this.setData(this.data);
     },
     stoptouchmove() {
         return false;
@@ -27,15 +62,15 @@ Page({
         });
 
         this.movings = this.movings.map((item, index) => {
-            this.data.grids[item + 15] && (this.data.grids[item + 15].status = 'active');
-            return item + 15;
+            this.data.grids[item + this.columns] && (this.data.grids[item + this.columns].status = 'active');
+            return item + this.columns;
         });
 
         this.setData({ grids: this.data.grids });
     },
     isGoOn(movings) {
         for(let i = 0; i < 18; i++) {
-            let arr = [movings[0] + i * 15, movings[1] + i * 15, movings[2] + i * 15, movings[3] + i * 15];
+            let arr = [movings[0] + i * this.columns, movings[1] + i * this.columns, movings[2] + i * this.columns, movings[3] + i * this.columns];
             
             if(isCross(arr, this.actives)) {
                 return i;
@@ -45,7 +80,7 @@ Page({
         return 100;
     },
     isRightGoOn(movings) {
-        for(let i = 0; i < 15; i++) {
+        for(let i = 0; i < this.columns; i++) {
             let arr = [movings[0] + i , movings[1] + i, movings[2] + i, movings[3] + i];
             
             if(isCross(arr, this.actives)) {
@@ -55,7 +90,7 @@ Page({
         return 100;
     },
     isLeftGoOn(movings) {
-        for(let i = 0; i < 15; i++) {
+        for(let i = 0; i < this.columns; i++) {
             let arr = [movings[0] - i, movings[1] - i, movings[2] - i, movings[3] - i];
             
             if(isCross(arr, this.actives)) {
@@ -73,9 +108,10 @@ Page({
                 return;
             }
             
-            if(this.movings[3] > 284 || ok === 1) {
+            if(this.movings[3] > this.columns * (this.rows - 1) || ok === 1) {
                 this.actives.push(...this.movings);
-
+                this.checkScore();
+                // 重新开始下一轮下落
                 this.movings = this.randomIndex();
                 this.move();
                 return
@@ -98,7 +134,7 @@ Page({
         });
 
         // 滚到最右边了
-        if(Math.max(...x) === 14) return;
+        if(Math.max(...x) === this.columns - 1) return;
 
         let ok = this.isRightGoOn(this.movings);
 
@@ -133,16 +169,6 @@ Page({
 
         this.setData(this.data);
     },
-    change(arr) {
-        let a = arr[0] % 15;
-        let b = Math.floor(arr[0] / 15);
-        let tmp = [arr[0]]
-        for(let i = 1; i < arr.length; i++) {
-            tmp[i] = (a + b - Math.floor(arr[i] / 15)) + 15 * (arr[i] % 15 - a + b - 1);
-        }
-
-        return tmp;
-    },
     onChangeShape(e) {
         if(e.detail.x > this.windowWidth / 2) {
             const start = indexToCoordinate(this.movings[1]);
@@ -156,17 +182,17 @@ Page({
                 const point = indexToCoordinate(this.movings[i]);
 
                 const [x, y] = coordinateChange(origin, point);
-                if(x < 0 || x > 14) {
+                if(x < 0 || x > this.columns - 1) {
                     return;
                 } else {
                     points.push([x, y]);
                 }
             }
             
-            const tmpMovings = points.map((item) => item[0] + item[1] * 15)
+            const tmpMovings = points.map((item) => item[0] + item[1] * this.columns)
                                      .sort((a, b) => a - b);
 
-            if(Math.min(...tmpMovings) < 0 || Math.max(...tmpMovings) > 284) {
+            if(Math.min(...tmpMovings) < 0 || Math.max(...tmpMovings) > this.columns * (this.rows - 1)) {
                 return;
             }
 

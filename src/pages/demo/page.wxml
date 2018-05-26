@@ -1,0 +1,3 @@
+
+<button bindtap="sort">排序</button>
+<test generic:test="li" generic:other="ul"></test>

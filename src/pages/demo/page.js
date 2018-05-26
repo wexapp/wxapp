@@ -4,17 +4,22 @@ Page({
             { name: 'china', text: '中国' },
             { name: 'usa', text: '美国' }
         ],
-        myProperty: ''
+        show: true,
+        myProperty: '',
+        lis: [1, 12222, 21, 4, 5]
     },
     onChangeText() {
         this.setData({
             'array[0].text': '1111'
         })
     },
-    onChange(e) {
-        console.log(e);
+    sort() {
+        this.setData({ show: !this.data.show });
     },
-    getUserInfo(e) {
+    onTap() {
+        this.setData({ show: false });
+    },
+    onChange(e) {
         console.log(e);
     },
     action() {
@@ -40,6 +45,9 @@ Page({
         console.log('Page onReachBottom: ', e);
     },
     onShareAppMessage(e) {
+        console.log(e);
+    },
+    onTabItemTap(e) {
         console.log(e);
     }
 });

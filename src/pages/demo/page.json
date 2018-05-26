@@ -11,6 +11,6 @@
         "my-component": "/components/event/my-component/com",
         "ul": "./custom-ul/ul",
         "li": "./custom-li/li",
-        "coupon": "./coupon/coupon"
+        "test": "./test/com"
     }
 }

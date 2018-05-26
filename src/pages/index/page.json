@@ -5,7 +5,6 @@
     "usingComponents": {
         "adsorption": "../../components/adsorption-bar/index",
         "nav-tabs": "../../components/nav-tabs/com",
-        "commodity-card": "../../components/commodity-card/com",
-        "coupon": "../demo/coupon/coupon"
+        "commodity-card": "../../components/commodity-card/com"
     }
 }
