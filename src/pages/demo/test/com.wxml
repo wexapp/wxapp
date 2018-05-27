@@ -1,8 +1,0 @@
-<view bindsubmit="submit">
-    <check-box value="1212" checked="{{ true }}"></check-box>
-    <view>抽象节点</view>
-    <test value="{{ value }}"></test>
-    <other></other>
-
-    <button formType="submit" bindtap="submit">submit</button>
-</view>

@@ -1,9 +1,0 @@
-{
-    "component": true,
-    "componentGenerics": {
-        "test": {
-            "default": "../custom-ul/ul"
-        },
-        "other": true
-    }
-}
