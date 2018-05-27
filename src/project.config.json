@@ -1,56 +1,50 @@
 {
-	"description": "项目配置文件。",
-	"setting": {
-		"urlCheck": false,
-		"es6": true,
-		"postcss": true,
-		"minified": true,
-		"newFeature": true
-	},
-	"compileType": "miniprogram",
-	"libVersion": "2.0.0",
-	"appid": "wxa5531f523a3bc21c",
-	"projectname": "demo",
-	"isGameTourist": false,
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"currentL": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": 0,
-			"list": [
-				{
-					"id": 0,
-					"name": "demo",
-					"pathName": "pages/picker/page",
-					"query": ""
-				},
-				{
-					"id": 1,
-					"name": "轮播",
-					"pathName": "pages/demo/page",
-					"query": ""
-				},
-				{
-					"id": 2,
-					"name": "game",
-					"pathName": "pages/game/page",
-					"query": ""
-				}
-			]
-		}
-	}
+    "description": "项目配置文件。",
+    "setting": {
+        "urlCheck": false,
+        "es6": true,
+        "postcss": true,
+        "minified": true,
+        "newFeature": true
+    },
+    "compileType": "miniprogram",
+    "libVersion": "2.0.0",
+    "appid": "wxa5531f523a3bc21c",
+    "projectname": "demo",
+    "isGameTourist": false,
+    "condition": {
+        "search": {
+            "current": -1,
+            "list": []
+        },
+        "conversation": {
+            "current": -1,
+            "list": []
+        },
+        "plugin": {
+            "current": -1,
+            "list": []
+        },
+        "game": {
+            "currentL": -1,
+            "list": []
+        },
+        "miniprogram": {
+            "current": -1,
+            "list": [
+                {
+                    "id": 0,
+                    "name": "demo",
+                    "pathName": "pages/picker/page",
+                    "query": ""
+                },
+                {
+                    "id": 2,
+                    "name": "game",
+                    "pathName": "pages/game/page",
+                    "query": ""
+                }
+            ]
+        }
+    }
 }

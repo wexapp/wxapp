@@ -6,6 +6,8 @@ const rename = require('gulp-rename');
 const plumer = require('gulp-plumber');
 const aliasCombo = require('gulp-alias-combo');
 const watch = require('./watch').watch;
+const runSequence = require('run-sequence');
+const gulpWatch = require('gulp-watch');
 
 const appDir = path.resolve(__dirname, 'src');
 
@@ -32,4 +34,14 @@ gulp.task('watch:less', function () {
 });
 
 
-gulp.task('default', ['watch:less']);
+gulp.task('wless', () => {
+    return gulpWatch(__dirname + '/src/**/*.less', (detail) => {
+        return gulp.src(__dirname + '/src/**/*.less').pipe(less()).pipe(rename({
+            extname: '.wxss'
+        })).pipe(gulp.dest('src'))
+    });
+})
+
+gulp.task('default', (cb) => {
+    return runSequence('wless', cb);
+});
