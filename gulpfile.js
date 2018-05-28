@@ -5,13 +5,11 @@ const less = require('gulp-less');
 const rename = require('gulp-rename');
 const plumer = require('gulp-plumber');
 const aliasCombo = require('gulp-alias-combo');
-const watch = require('./watch').watch;
+const Watch = require('./gulp/watch');
 const runSequence = require('run-sequence');
 const gulpWatch = require('gulp-watch');
-
-const appDir = path.resolve(__dirname, 'src');
-
-watch(appDir);
+const PATHS = require('./config').paths;
+const watch = new Watch(PATHS.appRootPath);
 
 gulp.task('less', function (e) {
     return (

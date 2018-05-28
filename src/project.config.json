@@ -35,13 +35,25 @@
                 {
                     "id": 0,
                     "name": "demo",
-                    "pathName": "pages/picker/page",
+                    "pathName": "pages/demo/page",
+                    "query": ""
+                },
+                {
+                    "id": 1,
+                    "name": "game",
+                    "pathName": "pages/game/page",
                     "query": ""
                 },
                 {
                     "id": 2,
-                    "name": "game",
-                    "pathName": "pages/game/page",
+                    "name": "picker",
+                    "pathName": "pages/picker/page",
+                    "query": ""
+                },
+                {
+                    "id": 3,
+                    "name": "new-picker",
+                    "pathName": "pages/picker/new-picker/page",
                     "query": ""
                 }
             ]

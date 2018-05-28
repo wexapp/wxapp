@@ -5,17 +5,23 @@ Page({
 });
 `;
 
-const com = `
-Component({
+const com = `Component({
     relations: {},
     properties: {},
     options: {},
     methods: {},
     ready() {}
-});
-`;
+});`;
 
-const pageJson = '{}';
+const pageJson = `
+{
+    "backgroundTextStyle": "black",
+    "navigationBarTitleText": "新页面",
+    "usingComponents": {
+
+    }
+}
+`;
 const comJson = `
 {
     "component": true
