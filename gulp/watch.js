@@ -1,8 +1,8 @@
 const fs = require('fs');
 const chokidar = require('chokidar');
-const writeBasicFiles = require('./gulp/writeBasicFiles');
-const updateAppJson = require('./gulp/updateAppJson');
-const updateAppConfigJson = require('./gulp/updateAppConfig');
+const writeBasicFiles = require('./writeBasicFiles');
+const updateAppJson = require('./updateAppJson');
+const updateAppConfigJson = require('./updateAppConfig');
 
 
 class Watch {
